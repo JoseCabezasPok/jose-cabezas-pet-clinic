@@ -1,0 +1,5 @@
+com\example\josecabezaspetclinic\model\Person.class
+com\example\josecabezaspetclinic\model\Vet.class
+com\example\josecabezaspetclinic\model\Owner.class
+com\example\josecabezaspetclinic\model\PetType.class
+com\example\josecabezaspetclinic\model\Pet.class
