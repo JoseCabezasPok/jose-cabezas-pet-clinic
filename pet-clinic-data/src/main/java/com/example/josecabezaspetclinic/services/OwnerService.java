@@ -2,15 +2,10 @@ package com.example.josecabezaspetclinic.services;
 
 import com.example.josecabezaspetclinic.model.Owner;
 
-import java.util.Set;
 
-public interface OwnerService {
+public interface OwnerService extends CrudService<Owner,Long>{
 
-    Owner findByLastName(String lastname);
+    Owner findByLastName(String lastName);
 
-    Owner findById(Long id);
 
-    Owner save(Owner owner);
-
-    Set<Owner> findAll();
 }
