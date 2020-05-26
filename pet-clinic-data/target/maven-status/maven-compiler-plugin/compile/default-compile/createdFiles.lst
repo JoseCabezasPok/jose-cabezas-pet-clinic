@@ -1,5 +1,14 @@
-com\example\josecabezaspetclinic\model\Person.class
+com\example\josecabezaspetclinic\services\map\AbstractMapService.class
+com\example\josecabezaspetclinic\services\OwnerService.class
+com\example\josecabezaspetclinic\model\BaseEntity.class
+com\example\josecabezaspetclinic\services\map\PetServiceMap.class
 com\example\josecabezaspetclinic\model\Vet.class
+com\example\josecabezaspetclinic\services\map\OwnerServiceMap.class
 com\example\josecabezaspetclinic\model\Owner.class
+com\example\josecabezaspetclinic\services\CrudService.class
+com\example\josecabezaspetclinic\services\map\VetServiceMap.class
 com\example\josecabezaspetclinic\model\PetType.class
 com\example\josecabezaspetclinic\model\Pet.class
+com\example\josecabezaspetclinic\services\PetService.class
+com\example\josecabezaspetclinic\model\Person.class
+com\example\josecabezaspetclinic\services\VetService.class
