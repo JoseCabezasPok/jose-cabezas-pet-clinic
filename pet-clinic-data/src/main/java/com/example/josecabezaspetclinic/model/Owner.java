@@ -1,16 +1,18 @@
 package com.example.josecabezaspetclinic.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 @Entity
 @Table(name = "owners")
 public class Owner extends Person {
-
+    @Column(name = "telephone")
     private String Telephone;
+    @Column(name ="city")
     private String City;
+    @Column(name = "address")
     private String address;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private Set<Pet> pets = new HashSet<>();
 
 

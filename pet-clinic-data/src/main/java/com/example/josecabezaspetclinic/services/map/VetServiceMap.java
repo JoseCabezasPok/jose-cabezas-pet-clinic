@@ -5,10 +5,12 @@ import com.example.josecabezaspetclinic.model.Vet;
 import com.example.josecabezaspetclinic.services.CrudService;
 import com.example.josecabezaspetclinic.services.SpecialtyService;
 import com.example.josecabezaspetclinic.services.VetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 @Service
+@Profile({"default","map"})
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     private final SpecialtyService specialtyService;
