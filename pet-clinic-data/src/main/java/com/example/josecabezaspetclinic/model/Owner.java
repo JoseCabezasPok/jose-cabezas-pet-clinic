@@ -1,50 +1,40 @@
 package com.example.josecabezaspetclinic.model;
 
+
+
+import lombok.*;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
+@Getter
+@Setter
+@NoArgsConstructor
+
+
 @Entity
 @Table(name = "owners")
 public class Owner extends Person {
+
+    @Builder
+    public Owner(Long id, String firstName, String lastName, String adress, String city,
+                 String telephone, Set<Pet> pets) {
+        super(id,firstName,lastName);
+        this.address = adress;
+        this.city = city;
+        this.telephone = telephone;
+        this.pets = pets;
+    }
+
     @Column(name = "telephone")
-    private String Telephone;
+    private String telephone;
     @Column(name ="city")
-    private String City;
+    private String city;
     @Column(name = "address")
     private String address;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private Set<Pet> pets = new HashSet<>();
 
 
-    public String getTelephone() {
-        return Telephone;
-    }
 
-    public void setTelephone(String telephone) {
-        Telephone = telephone;
-    }
-
-    public String getCity() {
-        return City;
-    }
-
-    public void setCity(String city) {
-        City = city;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public Set<Pet> getPets() {
-        return pets;
-    }
-
-    public void setPets(Set<Pet> pets) {
-        this.pets = pets;
-    }
 }
