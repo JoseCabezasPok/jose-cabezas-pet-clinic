@@ -10,12 +10,21 @@ import javax.persistence.Table;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Entity
 @Table(name = "types")
 public class PetType extends BaseEntity{
+
     @Column(name = "name")
     private String Name;
+
+    @Builder
+    public PetType(Long id, String name) {
+        super(id);
+        this.Name = name;
+    }
+
+    @Override
+    public String toString(){return this.Name;}
 
 
 }

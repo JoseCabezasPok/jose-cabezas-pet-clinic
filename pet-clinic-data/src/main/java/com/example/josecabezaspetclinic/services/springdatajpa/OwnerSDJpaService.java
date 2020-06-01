@@ -10,17 +10,17 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
 @Service
 @Profile("springdatajpa")
 public class OwnerSDJpaService implements OwnerService {
-
     private final OwnerRepository ownerRepository;
+
     private final PetRepository petRepository;
     private final PetTypeRepository petTypeRepository;
-
     public OwnerSDJpaService(OwnerRepository ownerRepository, PetRepository petRepository,
                              PetTypeRepository petTypeRepository) {
         this.ownerRepository = ownerRepository;
@@ -37,6 +37,11 @@ public class OwnerSDJpaService implements OwnerService {
     public Owner findById(Long aLong) {
        Optional<Owner> ownerOptional = ownerRepository.findById(aLong);
        return ownerOptional.orElse(null);
+    }
+
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastName) {
+        return ownerRepository.findAllByLastNameLike(lastName);
     }
 
     @Override
