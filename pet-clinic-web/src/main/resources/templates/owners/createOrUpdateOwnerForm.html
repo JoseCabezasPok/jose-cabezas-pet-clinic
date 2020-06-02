@@ -3,26 +3,25 @@
 
 <body>
 
-  <h2>Owner</h2>
+  <h2>Cliente</h2>
   <form th:object="${owner}" class="form-horizontal" id="add-owner-form" method="post">
     <div class="form-group has-feedback">
       <input
-        th:replace="~{fragments/inputField :: input ('First Name', 'firstName', 'text')}" />
+        th:replace="~{fragments/inputField :: input ('Nombre', 'firstName', 'text')}" />
       <input
-        th:replace="~{fragments/inputField :: input ('Last Name', 'lastName', 'text')}" />
+        th:replace="~{fragments/inputField :: input ('Apellido', 'lastName', 'text')}" />
       <input
-        th:replace="~{fragments/inputField :: input ('Address', 'address', 'text')}" />
+        th:replace="~{fragments/inputField :: input ('Direccion', 'address', 'text')}" />
       <input
-        th:replace="~{fragments/inputField :: input ('City', 'city', 'text')}" />
+        th:replace="~{fragments/inputField :: input ('Ciudad', 'city', 'text')}" />
       <input
-        th:replace="~{fragments/inputField :: input ('Telephone', 'telephone', 'text')}" />
+        th:replace="~{fragments/inputField :: input ('Telefono', 'telephone', 'text')}" />
     </div>
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
         <button
-          th:with="text=${owner['new']} ? 'Add Owner' : 'Update Owner'"
-          class="btn btn-default" type="submit" th:text="${text}">Add
-          Owner</button>
+          th:with="text=${owner['new']} ? 'Añadir cliente' : 'Update Owner'"
+          class="btn btn-default" type="submit" th:text="${text}">Añadir cliente</button>
       </div>
     </div>
   </form>

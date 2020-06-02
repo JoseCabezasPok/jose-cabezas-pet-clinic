@@ -1,7 +1,10 @@
 com\example\josecabezaspetclinic\bootstrap\DataLoader.class
+com\example\josecabezaspetclinic\Controllers\VisitController$1.class
 com\example\josecabezaspetclinic\Controllers\ErrorController.class
 com\example\josecabezaspetclinic\Controllers\OwnerController.class
+com\example\josecabezaspetclinic\Controllers\VisitController.class
 com\example\josecabezaspetclinic\Controllers\VetController.class
 com\example\josecabezaspetclinic\Controllers\IndexController.class
 com\example\josecabezaspetclinic\Controllers\PetController.class
 com\example\josecabezaspetclinic\JoseCabezasPetClinicApplication.class
+com\example\josecabezaspetclinic\formatters\PetTypeFormatter.class
